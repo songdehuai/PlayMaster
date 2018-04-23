@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--标题-->
+    <RelativeLayout
+        android:id="@+id/title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/titleColor">
+
+        <ImageView
+            android:id="@+id/title_left_iv"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_finish"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/title_right_li"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/title_right_tv"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="测试"
+                android:textColor="@color/titleTextColor"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:id="@+id/title_right_iv"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/title_right_li"
+            android:layout_toRightOf="@id/title_left_iv"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/titleTextColor"
+            android:textSize="16sp"
+            tools:text="标题" />
+
+    </RelativeLayout>
+
+    <!--内容区域-->
+    <FrameLayout
+        android:id="@+id/content_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--空视图-->
+    <FrameLayout
+        android:id="@+id/empty_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</LinearLayout>
